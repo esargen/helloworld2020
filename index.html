@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HelloWorld 2020</title>
+  <link href="helloworld.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://use.typekit.net/ugm7mjs.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div id="flash" class="grad"></div>
+    <div id="flash2" class="grad"></div>
+    <div id="footer">
+      <a href="#"><div style="width:0;height:0;border-bottom:1em solid white;border-left:1em solid transparent;border-right:1em solid transparent;"></div></a>
+    </div>
+
+
+<script>
+  function openNav() {
+    if (window.matchMedia("(max-device-width: 480px)").matches) {
+      document.getElementById("navbar").style.opacity="1";
+      document.getElementById("navoverlay").style.opacity=".5";
+    } else {
+      document.getElementById("navbar").style.opacity="1";
+      document.getElementById("navoverlay").style.display="none";
+    }
+  }
+  function closeNav() {
+    if (window.matchMedia("(max-device-width: 480px)").matches) {
+      document.getElementById("navbar").style.opacity="0";
+      document.getElementById("navoverlay").style.opacity="0";
+    } else {
+      document.getElementById("navbar").style.opacity="1";
+      document.getElementById("navoverlay").style.display="none";
+    }
+  }
+
+</script>
+
+    <div class="bar">
+      <img src="listen.png" onclick="openNav()">
+      <div id="navbar">
+        <div class="navbutton" onclick="closeNav()" style="display: flex;flex-wrap:wrap;width:8em;height:2em">
+          <div class="arrowleft" style="25%"></div>
+          <div class="nametag" style="background-color: white;flex:50%;"><a href="#about">About</a></div>
+          <div class="arrowright" style="25%"></div>
+        </div>
+        <div class="navbutton" onclick="closeNav()" style="display: flex;flex-wrap:wrap;width:8.5em;height:2em">
+          <div class="arrowleft" style="25%"></div>
+          <div class="nametag" style="background-color: white;flex:50%;"><a href="#partners">Partners</a></div>
+          <div class="arrowright" style="25%"></div>
+        </div>
+        <div class="navbutton" onclick="closeNav()" style="display: flex;flex-wrap:wrap;width:8em;height:2em">
+          <div class="arrowleft" style="25%"></div>
+          <div class="nametag" style="background-color: white;flex:50%;"><a href="faq.html">FAQ</a></div>
+          <div class="arrowright" style="25%"></div>
+        </div>
+        <div class="navbutton" onclick="closeNav()" style="display: flex;flex-wrap:wrap;width:8em;height:2em">
+          <div class="arrowleft" style="25%"></div>
+          <div class="nametag" style="background-color: white;flex:50%;"><a href="#contact">Contact</a></div>
+          <div class="arrowright" style="25%"></div>
+        </div>
+      </div>
+    </div>
+    <div id="navoverlay" onclick="closeNav()"></div>
+
+
+    <div id="landing">
+      <div style="max-width: 50%; margin-right: 3em; overflow: hidden; margin: auto;">
+        <img style="width: 100%; transform:scale(1.5)" src="">
+      </div>
+      <div id="titlegroup">
+        <img src="Asset 1.png">
+        <div class="mobilestack">
+          <h3>Clemson's premiere freshman hackathon</h3>
+          <div class="buttons">
+            <a href="" class="applybutton">
+              <div style="display:flex;flex-wrap:wrap;width:8em;height:2em">
+                <div class="arrowleft" style="25%"></div>
+                <div class="nametag" style="background-color: white;flex:50%;">Apply!</div>
+                <div class="arrowright" style="25%"></div>
+              </div>
+            </a>
+            <a href="" class="applybutton">
+              <div style="display:flex;flex-wrap:wrap;width:8em;height:2em">
+                <div class="arrowleft" style="border-right:1em solid #ef5270"></div>
+                <div class="nametag" style="background-color:#ef5270;color: white;flex:50%;">Mentor!</div>
+                <div class="arrowright" style="border-left:1em solid #ef5270"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="text">
+        <h2>a little about us</h2>
+        <p>Join us for a day of building, learning, and fun at South Carolina’s premiere hackathon! Spend 24 hours coding and collaborating in the beautiful Watt Family Innovation Center at Clemson University while we handle the food, coffee, and snacks. Experience our Makerspace and Immersive Space, attend workshops, and interact with representatives from companies small and large.</p>
+        <p>No matter your major or level of experience, we want to see you create your next hack with us at HelloWorld!</p>
+        <a href="faq.html">
+        <div class="navbutton" style="display: flex;flex-wrap:wrap;width:8em;height:2em">
+          <div class="arrowleft" style="25%"></div>
+          <div class="nametag" style="background-color: white;flex:50%;">FAQ</div>
+          <div class="arrowright" style="25%"></div>
+        </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="partners">
+      <h2>Our partners</h2>
+      <div id="sponsorcloud">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+        <img src="listen.png">
+      </div>
+    </div>
+
+    <div id="contact">
+      <h2>Get in touch!</h2>
+      <form method="post">
+        <input type="text" id="item" name="item" placeholder="Your email here">
+        <input class="button" type="submit" value="submit">
+      </form>
+      <div id="socials">
+        <div>
+          <img src="twit.png">
+          <img src="ig.png">
+          <img src="fb.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</body>
+
+</html>
