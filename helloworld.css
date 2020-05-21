@@ -25,6 +25,7 @@ p {
   width: 60em;
   right: 0;
   z-index: 1;
+  display: none;
 }
 #flash2 {
   background: radial-gradient(white 0%, transparent 55%);
@@ -36,6 +37,8 @@ p {
   left: -30em;
   z-index: 1;
   animation-delay: 2s;
+  display: none;
+
 }
 
 #flash3 {
@@ -47,13 +50,15 @@ p {
   right: 0;
   bottom: 5em;
   z-index: 1;
+  display: none;
+
 }
 
 .wrapper {
   width: 100%;
   overflow: hidden;
   font-family: 'neue-haas-grotesk-display', sans-serif;
-  background-color: #999999;
+  background-color: #2f308d;
   color: white;
 }
 
@@ -95,7 +100,7 @@ p {
 
 #footer div:hover {
   transform: scale(1.1);
-  border-bottom:1em solid black;
+  border-bottom:1em solid #71c4dc;
   transition: .25s ease;
 }
 
@@ -109,7 +114,7 @@ p {
   opacity: 1;
 }
 #navbar a, #contact .button {
-  color: black;
+  color: #2f308d;
   padding: .2em .5em;
   font-weight: 600;
   font-size: 14pt;
@@ -159,7 +164,7 @@ p {
  }
 /*#titlegroup h1 {
   font-size: 5em;
-  color: black;
+  color: #71c4dc;
 }*/
 #titlegroup img {
   position: relative;
@@ -198,7 +203,7 @@ p {
 .nametag {
   font-size: 1.2em;
   font-weight: 600;
-  color:black;
+  color:#2f308d;
   text-align: center;
   padding: .15em;
 }
@@ -287,6 +292,9 @@ h2 {
 }
 #contact form #item {
   height: 2.25em;
+  border-radius: .25em;
+  position: relative;
+  bottom: .25em;
 }
 
 .contactblock {
@@ -337,13 +345,40 @@ input .button {
 
 
 .social:hover {
-  color: black !important;
+  color: #71c4dc !important;
   background-color: aliceblue !important;
   transition: .25s ease;
   cursor: pointer;
 }
 
+h4 {
+  color: #71c4dc;
+  font-size: 1.4em;
+}
 
+#faqcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 85%;
+  margin: auto;
+}
+
+#faqcontainer .column {
+  max-width: 45%;
+  flex: 45%;
+  overflow: hidden;
+}
+
+#faqcontainer .column .answer {
+  text-align: justify;
+  max-width: 85%;
+}
+
+#faqcontainer img {
+  margin-left: 30%;
+  width: 7em;
+}
 
 @keyframes grad {
   0% {
@@ -447,6 +482,7 @@ input .button {
     z-index: 4;
     transition: opacity .5s ease;
     transition: display 0s;
+    pointer-events: none;
   }
 
   #footer div {
@@ -535,4 +571,16 @@ input .button {
     display: none;
   }
 
+  #faqcontainer {
+    display: block;
+  }
+  .wrapper h1 {
+    font-size: 3em;
+    margin-left: 5%;
+
+  }
+  #faqcontainer .column {
+    margin: auto;
+    max-width: 85%;
+  }
 }
