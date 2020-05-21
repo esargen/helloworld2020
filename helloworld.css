@@ -7,22 +7,27 @@ p {
   letter-spacing: 1.5;
 }
 
-#landing, #about, #partners, #contact {
+#landing, #about, #partners, #partners img, #partners h2 {
   z-index: 2;
   position: relative;
 }
 
-#flash {
-  background: radial-gradient(farthest-corner at 85% 5%, pink 0%, transparent 55%);
-  opacity: 65%;
+.flash {
   position: absolute;
-  height: 60em;
+  z-index: 1;
+}
+
+#flash {
+  background: radial-gradient(farthest-corner at 50% 50%, white 0%, transparent 65%);
+  opacity: 30%;
+  position: absolute;
+  height: 40em;
   width: 60em;
   right: 0;
   z-index: 1;
 }
 #flash2 {
-  background: radial-gradient(aliceblue 0%, transparent 55%);
+  background: radial-gradient(white 0%, transparent 55%);
   opacity: 5%;
   position: absolute;
   height: 75em;
@@ -33,19 +38,33 @@ p {
   animation-delay: 2s;
 }
 
+#flash3 {
+  background: radial-gradient(farthest-corner at 85% 50%, white 0%, transparent 65%);
+  opacity: 65%;
+  position: absolute;
+  height: 60em;
+  width: 60em;
+  right: 0;
+  bottom: 5em;
+  z-index: 1;
+}
+
 .wrapper {
   width: 100%;
   overflow: hidden;
   font-family: 'neue-haas-grotesk-display', sans-serif;
-  background-color: #224dc6;
+  background-color: #999999;
   color: white;
 }
 
 .grad {
   animation: grad 4s ease;
+  animation-iteration-count: 1;
+}
+.grad2 {
+  animation: grad2 4s ease;
   animation-iteration-count: infinite;
 }
-
 #footer {
   position: fixed;
   bottom: 0;
@@ -65,6 +84,21 @@ p {
   color: white;
 }
 
+#footer div {
+  width:0;
+  height:0;
+  border-bottom:1em solid white;
+  border-left:1em solid transparent;
+  border-right:1em solid transparent;
+  transition: .25s ease;
+}
+
+#footer div:hover {
+  transform: scale(1.1);
+  border-bottom:1em solid black;
+  transition: .25s ease;
+}
+
 #navbar {
   width: 50%;
   justify-content: space-between;
@@ -74,11 +108,18 @@ p {
   padding: .5em;
   opacity: 1;
 }
-#navbar a {
-  color: #ef5270;
+#navbar a, #contact .button {
+  color: black;
   padding: .2em .5em;
   font-weight: 600;
   font-size: 14pt;
+}
+.navbutton {
+  display: flex;flex-wrap:wrap;width:8em;height:2em
+}
+.navbutton:hover {
+  transform:scale(1.1);
+  transition: .5s ease;
 }
 
 .bar {
@@ -86,7 +127,7 @@ p {
   position: fixed;
   z-index: 3;
 }
-.bar img {
+.bar i {
   display: none;
 }
 
@@ -118,11 +159,14 @@ p {
  }
 /*#titlegroup h1 {
   font-size: 5em;
-  color: #ef5270;
+  color: black;
 }*/
 #titlegroup img {
+  position: relative;
   width: 90%;
   margin-bottom: 1em;
+  animation: floaty 5s ease;
+  animation-iteration-count: infinite;
 }
 #titlegroup h3 {
   font-weight: 500;
@@ -142,14 +186,19 @@ p {
 
 .applybutton {
   width: 6em;
+  transition: .5s ease;
 }
 .applybutton img {
   width: 100%;
 }
+.applybutton:hover {
+  transform:scale(1.05);
+  transition: .5s ease;
+}
 .nametag {
   font-size: 1.2em;
   font-weight: 600;
-  color:#ef5270;
+  color:black;
   text-align: center;
   padding: .15em;
 }
@@ -171,10 +220,16 @@ p {
 }
 
 #about {
-  width: 85%;
-  padding: 5em 2em 7em 2em;
   z-index: 2;
-  margin-left: 10%;
+  width: 100%;
+  padding-top: 5em;
+
+}
+
+#about > div {
+  width: 95%;
+  margin: auto;
+  border: 3px solid white;
 }
 
 h2 {
@@ -186,8 +241,9 @@ h2 {
   column-gap: .25em;*/
 }
 #about .text {
-  max-width: 60%;
+  max-width: 75%;
   text-align: justify;
+  padding: 1em 2em 3em 2em;
 
 }
 
@@ -207,58 +263,154 @@ h2 {
   flex-wrap: wrap;
   margin: auto;
 }
-#sponsorcloud img {
-  max-height: 5em;
-  max-width: 30%;
-  margin: .25em .5em;
+#sponsorcloud a {
+  height: 5em;
+  width: 20%;
+  margin: 2.5em .5em;
   cursor: pointer;
+  overflow: none;
+  border: 3px solid white;
+}
+
+#sponsorcloud img {
+  max-width: 100%;
 }
 
 #contact {
   position: relative;
   right: 0;
-  text-align: right;
-  margin-right: 10%;
-}
-#socials {
   width: 100%;
-  margin-top: 10em;
+  margin-bottom: 5em;
+}
+#contact form {
+  margin-right: 20%;
+}
+#contact form #item {
+  height: 2.25em;
+}
+
+.contactblock {
+  text-align: right;
+  z-index:2;
+  margin: auto;
+  position:relative;
+  width: 95%;
+  border: 3px solid white;
+}
+
+.contactblock > div {
+  padding:.5em 3em 3em 3em;
+}
+
+input .button {
   background-color: white;
+  border: 0;
+}
+
+#socials {
+  margin: 6em 0em 3em 3em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width:25%;
 }
+#socials .social {
+  font-size: 36px;
+  color: aliceblue;
+  padding: 7px;
+  text-align: center;
+  transition: .25s ease;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  bottom: 50px;
+  position:relative;
+  z-index:2;
+  transform: rotate(45deg);
+}
+
+.social i {
+  position:relative;
+  z-index: 3;
+  transform: rotate(-45deg);
+}
+
+
+.social:hover {
+  color: black !important;
+  background-color: aliceblue !important;
+  transition: .25s ease;
+  cursor: pointer;
+}
+
 
 
 @keyframes grad {
   0% {
+    opacity: 30%;
+  }
+  15% {
+    opacity: 60%;
+  }
+  45% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 60%
+  }
+  100% {
+    opacity: 30%;
+  }
+}
+
+
+@keyframes grad2 {
+  0% {
     opacity: 15%;
   }
   15% {
-    opacity: 50%;
+    opacity: 30%;
   }
   45% {
-    opacity: 45%;
+    opacity: 25%;
   }
   75% {
-    opacity: 65%
+    opacity: 35%
   }
   100% {
     opacity: 15%;
   }
 }
 
+@keyframes floaty {
+  0% {
+    bottom: .5em;
+  }
+
+  50% {
+    bottom: -.5em;
+  }
+
+  100% {
+    bottom:.5em;
+  }
+}
+
 @media (max-device-width: 480px) {
+  #flash, #flash2, #flash3 {
+    display: none;
+  }
 
   .bar {
     z-index: 5;
   }
 
-  .bar img {
+  .bar i {
     display: block;
     width: 15%;
     height: 20%;
-    margin: 3em;
+    margin: 1em;
+    font-size: 48pt;
   }
 
   #navbar {
@@ -294,6 +446,7 @@ h2 {
     width: 100%;
     z-index: 4;
     transition: opacity .5s ease;
+    transition: display 0s;
   }
 
   #footer div {
@@ -314,6 +467,7 @@ h2 {
 }
   .applybutton .nametag {
     font-size: 2em;
+    padding: 1em 2em;
   }
 
   .mobilestack {
@@ -324,7 +478,7 @@ h2 {
   #titlegroup {
     text-align: center;
     float: none;
-    margin: 7em auto;
+    margin: 5em auto;
     max-width: 75%; }
 
   #titlegroup h1 {
@@ -332,12 +486,25 @@ h2 {
 
   #titlegroup h3 {
     font-size: 2.5em;
+    margin-top: 3em;
     width: 100%;
   }
 
   #titlegroup .mobilestack div {
     width: 50%;
   }
+
+.buttons {
+  width: 85% !important;
+  margin: auto;
+}
+
+.applybutton {
+  flex: 50%;
+  width: 50% !important;
+}
+
+
 
   #about .text {
     max-width: 50%;
@@ -355,9 +522,17 @@ h2 {
   #contact {
     text-align: center;
     right: auto;
-    margin-right: auto;
+    margin: auto;
   }
-  #contact form {
-    transform: scale(2);
+  #socials {
+    max-width: 85%;
+    bottom: 0px;
   }
+  #socials .social {
+    font-size: 50pt;
+  }
+  .decorativelines {
+    display: none;
+  }
+
 }
