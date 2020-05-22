@@ -21,7 +21,7 @@
   function openNav() {
     if (window.matchMedia("(max-device-width: 480px)").matches) {
       document.getElementById("navbar").style.opacity="1";
-      document.getElementById("navoverlay").style.opacity=".5";
+      document.getElementById("navoverlay").style.opacity=".75";
       document.getElementById("navbar").style.pointerEvents="auto";
       document.getElementById("navoverlay").style.pointerEvents="auto";
     } else {
@@ -105,20 +105,20 @@
     </div>
 
     <div id="about">
-      <div>
+      <div class="block">
         <div class="text">
           <h2>a little about us</h2>
           <p>Join us for a day of building, learning, and fun at South Carolina’s premiere hackathon! Spend 24 hours coding and collaborating in the beautiful Watt Family Innovation Center at Clemson University while we handle the food, coffee, and snacks. Experience our Makerspace and Immersive Space, attend workshops, and interact with representatives from companies small and large.</p>
           <p>No matter your major or level of experience, we want to see you create your next hack with us at HelloWorld!</p>
           <a href="faq.html">
           <div class="navbutton">
-            <div class="arrowleft" style="25%"></div>
-            <div class="nametag" style="background-color: white;flex:50%;">FAQ</div>
-            <div class="arrowright" style="25%"></div>
+            <div class="arrowleft" style="border-right:1em solid #71c4dc"></div>
+            <div class="nametag" style="background-color:#71c4dc;color: white;flex:50%;">FAQ</div>
+            <div class="arrowright" style="border-left:1em solid #71c4dc"></div>
           </div>
           </a>
         </div>
-        <div class="futureimage image" >
+        <div class="futureimage2 image" >
         </div>
       </div>
     </div>
@@ -145,13 +145,15 @@
 
     <div id="contact">
       <div class="flash grad2" id="flash3"></div>
-      <div class="contactblock">
+      <div class="block">
         <div>
           <h2>Get in touch!</h2>
-          <form method="post">
-            <input type="text" id="item" name="item" placeholder="Your email here">
-            <input class="button" type="submit" value="submit">
-          </form>
+          <div class="container">
+            <form method="post">
+              <input type="text" id="item" name="item" placeholder="Your email here">
+              <input class="button" type="submit" value="submit">
+            </form>
+          </div>
         </div>
       </div>
     </div>
