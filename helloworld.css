@@ -12,6 +12,14 @@ p {
   position: relative;
 }
 
+.futureimage {
+  border: 1pt dashed white;
+  width: 20em;
+  height: 20em;
+  margin: 2em auto;
+
+}
+
 .flash {
   position: absolute;
   z-index: 1;
@@ -120,7 +128,8 @@ p {
   font-size: 14pt;
 }
 .navbutton {
-  display: flex;flex-wrap:wrap;width:8em;height:2em
+  display: flex;flex-wrap:wrap;width:8em;height:2em;
+  transition: .5s ease;
 }
 .navbutton:hover {
   transform:scale(1.1);
@@ -232,9 +241,10 @@ p {
 }
 
 #about > div {
-  width: 95%;
   margin: auto;
   border: 3px solid white;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 h2 {
@@ -246,10 +256,16 @@ h2 {
   column-gap: .25em;*/
 }
 #about .text {
-  max-width: 75%;
+  max-width: 50%;
+  flex: 50%;
   text-align: justify;
   padding: 1em 2em 3em 2em;
 
+}
+#about .image {
+  flex: 30%;
+  max-width: 30%;
+  padding: 1em 2em 3em 2em;
 }
 
 #partners {
@@ -257,6 +273,15 @@ h2 {
   margin: auto;
   text-align: center;
   padding: 3em 0 5em 0;
+}
+
+#partnerbutton {
+  border-radius: 3em;
+  background-color: #71c4dc;
+  color: white;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 #sponsorcloud {
@@ -274,7 +299,6 @@ h2 {
   margin: 2.5em .5em;
   cursor: pointer;
   overflow: none;
-  border: 3px solid white;
 }
 
 #sponsorcloud img {
@@ -321,6 +345,7 @@ input .button {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width:25%;
+  flex: 25%;
 }
 #socials .social {
   font-size: 36px;
@@ -354,6 +379,15 @@ input .button {
 h4 {
   color: #71c4dc;
   font-size: 1.4em;
+}
+
+#bottom {
+  width: 100%;
+  display: flex;
+}
+
+#faqtitle {
+  margin-left: 5%;
 }
 
 #faqcontainer {
@@ -555,10 +589,23 @@ h4 {
     display: none;
   }
 
+#sponsorcloud a {
+  width: 45%;
+}
+
+#partnerbutton {
+  font-size: 1.75em;
+  margin-top: 2em;
+}
+
   #contact {
     text-align: center;
     right: auto;
     margin: auto;
+  }
+  #contact form {
+    transform: scale(2);
+    margin-right: 50%;
   }
   #socials {
     max-width: 85%;
@@ -578,6 +625,9 @@ h4 {
     font-size: 3em;
     margin-left: 5%;
 
+  }
+  #bottom {
+    display: block;
   }
   #faqcontainer .column {
     margin: auto;
