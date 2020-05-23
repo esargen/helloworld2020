@@ -227,6 +227,7 @@ p {
   text-align: center;
   padding: .15em;
   width: 100%;
+  height: 100%;
 }
 
 
@@ -541,13 +542,12 @@ h4 {
    }
 
   #navbar a, #navbar p {
-    font-size: 2em;
+    font-size: 4em;
   }
 
   #navbar p {
     display: block;
     font-weight: 600;
-    font-size: 3em;
   }
 
   #navbar div {
@@ -561,7 +561,7 @@ h4 {
     background-color: white;
     opacity: 0;
     position: absolute;
-    height: 200vh;
+    height: 250vh;
     width: 100%;
     z-index: 4;
     transition: opacity .5s ease;
