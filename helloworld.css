@@ -216,6 +216,14 @@ p {
 .applybutton img {
   width: 100%;
 }
+
+.applybutton > div {
+  display:flex;
+  flex-wrap:wrap;
+  width:8em;
+  height:2em;
+}
+
 .applybutton:hover {
   transform:scale(1.05);
   transition: .5s ease;
@@ -228,22 +236,23 @@ p {
   padding: .15em;
   width: 100%;
   height: 100%;
+  align-items: center;
 }
 
 
 .arrowright {
   width: 0;
   height: 0;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-left: 1em solid white;
+  border-top: 1.2em solid transparent;
+  border-bottom: 1.2em solid transparent;
+  border-left: 1.2em solid white;
 }
 .arrowleft {
   width: 0;
   height: 0;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-right:1em solid white;
+  border-top: 1.2em solid transparent;
+  border-bottom: 1.2em solid transparent;
+  border-right: 1.2em solid white;
 }
 
 #about {
@@ -561,7 +570,7 @@ h4 {
     background-color: white;
     opacity: 0;
     position: absolute;
-    height: 250vh;
+    height: 217vh;
     width: 100%;
     z-index: 4;
     transition: opacity .5s ease;
