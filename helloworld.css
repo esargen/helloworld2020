@@ -141,8 +141,6 @@ p {
 .navbutton {
   display: flex;flex-wrap:wrap;width:8em;height:2em;
   transition: .5s ease;
-  overflow: hidden;
-
 }
 .navbutton:hover {
   transform:scale(1.1);
@@ -172,27 +170,6 @@ p {
   z-index: 2;
   position: relative;
 }
-
-#landing .nametag {
-  font-size: 1.74em;
-}
-
-#landing .arrowleft {
-  width: 0;
-  height: 0;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
-  border-right: 1.5em solid white;
-}
-
-#landing .arrowright {
-  width: 0;
-  height: 0;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
-  border-left: 1.5em solid white;
-}
-
 
 .mobilestack {
   display: flex;
@@ -228,12 +205,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content:space-between;
-  width:58%;
+  width:45%;
   margin-left: 2%;
 }
 
 .applybutton {
-  width: 10em;
+  width: 6em;
   transition: .5s ease;
 }
 .applybutton img {
@@ -243,6 +220,7 @@ p {
 .applybutton > div {
   display:flex;
   flex-wrap:wrap;
+  width:8em;
   height:2em;
 }
 
@@ -256,6 +234,8 @@ p {
   color:#2f308d;
   text-align: center;
   padding: .15em;
+  width: 100%;
+  height: 100%;
   align-items: center;
 }
 
@@ -263,16 +243,16 @@ p {
 .arrowright {
   width: 0;
   height: 0;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-left: 1em solid white;
+  border-top: 1.2em solid transparent;
+  border-bottom: 1.2em solid transparent;
+  border-left: 1.2em solid white;
 }
 .arrowleft {
   width: 0;
   height: 0;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-right: 1em solid white;
+  border-top: 1.2em solid transparent;
+  border-bottom: 1.2em solid transparent;
+  border-right: 1.2em solid white;
 }
 
 #about {
@@ -375,6 +355,7 @@ h2 {
 
 #contact form .button {
   background-color: #71c4dc;
+  border: 0;
   border: .25em solid #71c4dc;
 }
 
@@ -569,8 +550,6 @@ h4 {
      margin: 5em auto;
    }
 
-
-
   #navbar a, #navbar p {
     font-size: 4em;
   }
@@ -598,8 +577,6 @@ h4 {
     transition: display 0s;
     pointer-events: none;
   }
-
-
 
   #footer div {
     transform: scale(2);
