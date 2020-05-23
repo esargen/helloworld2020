@@ -141,6 +141,7 @@ p {
 .navbutton {
   display: flex;flex-wrap:wrap;width:8em;height:2em;
   transition: .5s ease;
+  overflow: hidden;
 }
 .navbutton:hover {
   transform:scale(1.1);
@@ -205,7 +206,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content:space-between;
-  width:45%;
+  width:50%;
   margin-left: 2%;
 }
 
@@ -220,7 +221,7 @@ p {
 .applybutton > div {
   display:flex;
   flex-wrap:wrap;
-  width:8em;
+  width:10em;
   height:2em;
 }
 
@@ -228,8 +229,24 @@ p {
   transform:scale(1.05);
   transition: .5s ease;
 }
+
+.applybutton .arrowleft {
+  border-top: 1.37em solid transparent;
+  border-bottom: 1.37em solid transparent;
+  border-right: 1.37em solid white;
+}
+
+.applybutton .arrowright {
+  border-top: 1.37em solid transparent;
+  border-bottom: 1.37em solid transparent;
+  border-left: 1.37em solid white;
+}
+.applybutton .nametag {
+  font-size: 1.9em;
+  padding: .2em;
+}
 .nametag {
-  font-size: 1.2em;
+  font-size: 1.15em;
   font-weight: 600;
   color:#2f308d;
   text-align: center;
@@ -243,16 +260,16 @@ p {
 .arrowright {
   width: 0;
   height: 0;
-  border-top: 1.2em solid transparent;
-  border-bottom: 1.2em solid transparent;
-  border-left: 1.2em solid white;
+  border-top: 1.05em solid transparent;
+  border-bottom: 1.05em solid transparent;
+  border-left: 1.05em solid white;
 }
 .arrowleft {
   width: 0;
   height: 0;
-  border-top: 1.2em solid transparent;
-  border-bottom: 1.2em solid transparent;
-  border-right: 1.2em solid white;
+  border-top: 1.05em solid transparent;
+  border-bottom: 1.05em solid transparent;
+  border-right: 1.05em solid white;
 }
 
 #about {
