@@ -293,6 +293,15 @@ p {
   justify-content: space-between;
 }
 
+#about .block {
+  width: 98%;
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 3px 20px #71c4dc;
+  padding-bottom: 3em;
+}
+
 h2 {
   font-size: 3em;
 }
@@ -355,11 +364,20 @@ h2 {
   position: relative;
   right: 0;
   width: 100%;
+  margin: auto;
   margin-bottom: 5em;
+  width: 98%;
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 3px 20px #71c4dc;
+  padding-bottom: 3em;
 }
 
 #contact h2 {
   margin-right: 15%;
+  float: right;
+  position: relative;
 }
 
 #about, #contact {
@@ -367,7 +385,7 @@ h2 {
 }
 
 #contact form {
-  margin-right: 20%;
+  margin-right: 1%;
   height: 35pt;
   overflow: hidden;
 }
@@ -386,19 +404,17 @@ h2 {
   cursor: pointer;
 }
 
+#contact .block {
+}
+
 .block {
   text-align: right;
   z-index:2;
   margin: auto;
   position:relative;
-  width: 98%;
-  border: 3px solid white;
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: 0 3px 20px #71c4dc;
-  padding-bottom: 3em;
   display: flex;
   flex-wrap: wrap;
+  width: 70%;
 }
 
 .contactblock > div {
@@ -411,13 +427,15 @@ input .button {
 }
 
 #socials {
-  margin: 6em 0em 0em 10em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width:30%;
-  flex: 30%;
+  max-width:40%;
+  flex: 40%;
+  position: relative;
+  bottom: 45px;
 }
+
 #socials .social {
   font-size: 36px;
   color: #71c4dc;
@@ -610,6 +628,10 @@ h4 {
     pointer-events: none;
   }
 
+  #closebutton:hover, #closebutton:active {
+    color: #71c4dc;
+  }
+
   #footer div {
     transform: scale(2);
     margin-left: 1em;
@@ -695,10 +717,23 @@ h4 {
     text-align: center;
     right: auto;
     margin: auto;
+    display: block;
+    height: 400px;
   }
   #contact .container {
     margin: auto;
   }
+
+  #contact .block {
+    display: block;
+  }
+
+  #contact form {
+    position: relative;
+    bottom: 50px;
+    height: auto;
+  }
+
   #contact form #item {
     width: 55%;
     height: 75px;
@@ -719,7 +754,9 @@ h4 {
 
   #socials {
     max-width: 85%;
-    bottom: 0px;
+    margin-top: 150px;
+    position: relative;
+    top: 125px;
   }
   #socials .social {
     font-size: 50pt;
