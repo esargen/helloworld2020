@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 p {
@@ -74,7 +73,6 @@ p {
   font-family: 'neue-haas-grotesk-display', sans-serif;
   background-color: #2f308d;
   color: white;
-  height: 100%;
 }
 
 .grad {
@@ -374,10 +372,10 @@ h2 {
   padding-bottom: 3em;
 }
 
-#contact h2 {
+#contact h2, #contact #partnerbutton {
   margin-right: 15%;
-  float: right;
   position: relative;
+  float: right;
 }
 
 #about, #contact {
@@ -433,7 +431,13 @@ input .button {
   max-width:40%;
   flex: 40%;
   position: relative;
-  bottom: 45px;
+  bottom: 35px;
+  padding: 20px;
+  transition: .25s ease;
+}
+
+#socials:hover {
+  transition: .25s ease;
 }
 
 #socials .social {
@@ -464,6 +468,15 @@ input .button {
   cursor: pointer;
 }
 
+.socialcontainer {
+  transition: .25s ease;
+}
+
+.socialcontainer:hover {
+  transform: scale(1.2) !important;
+  transition: .25s ease;
+}
+
 h4 {
   color: #71c4dc;
   font-size: 1.4em;
@@ -476,6 +489,7 @@ h4 {
 
 #faqtitle {
   margin-left: 5%;
+  margin-top: 5%;
 }
 
 #faqcontainer {
@@ -484,6 +498,7 @@ h4 {
   justify-content: space-between;
   max-width: 85%;
   margin: auto;
+  padding-bottom: 40px;
 }
 
 #faqcontainer .column {
@@ -501,6 +516,7 @@ h4 {
   margin-left: 30%;
   width: 7em;
 }
+
 
 @keyframes grad {
   0% {
@@ -577,9 +593,9 @@ h4 {
   }
 
   #footer {
-    transform: scale(2.5);
-    bottom: 30px;
-    left: 30px;
+    transform: scale(2.15);
+    bottom: 50px;
+    left: 50px;
   }
 
   #navbar {
@@ -753,10 +769,9 @@ h4 {
   }
 
   #socials {
-    max-width: 85%;
+    width: 100%;
     margin-top: 150px;
     position: relative;
-    top: 125px;
   }
   #socials .social {
     font-size: 50pt;
@@ -779,5 +794,9 @@ h4 {
   #faqcontainer .column {
     margin: auto;
     max-width: 85%;
+  }
+  #faqtitle {
+    margin-top: 20%;
+    margin-left: 10%;
   }
 }
