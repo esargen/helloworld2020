@@ -6,6 +6,7 @@ p {
   font-size: 12pt;
 }
 
+
 #landing, #about, #partners, #partners img, #partners h2 {
   z-index: 2;
   position: relative;

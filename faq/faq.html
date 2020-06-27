@@ -3,13 +3,74 @@
 
 <head>
   <title>FAQ</title>
-  <link href="helloworld.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=.5">
+  <link href="../helloworld.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://use.typekit.net/ugm7mjs.css">
+  <script src="https://kit.fontawesome.com/1bcdd38cc2.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-  <div class="wrapper">
+<div class="wrapper">
+  <div id="footer">
+    <a href="#"><div></div></a>
+  </div>
+
+  <script>
+    function openNav() {
+      if (window.matchMedia("(max-device-width: 480px)").matches) {
+        document.getElementById("navbar").style.opacity="1";
+        document.getElementById("navoverlay").style.opacity=".75";
+        document.getElementById("navbar").style.pointerEvents="auto";
+        document.getElementById("navoverlay").style.pointerEvents="auto";
+      } else {
+        document.getElementById("navbar").style.opacity="1";
+        document.getElementById("navoverlay").style.display="none";
+      }
+    }
+    function closeNav() {
+      if (window.matchMedia("(max-device-width: 480px)").matches) {
+        document.getElementById("navbar").style.opacity="0";
+        document.getElementById("navoverlay").style.opacity="0";
+        document.getElementById("navbar").style.pointerEvents="none";
+        document.getElementById("navoverlay").style.pointerEvents="none";
+      } else {
+        document.getElementById("navbar").style.opacity="1";
+        document.getElementById("navoverlay").style.display="none";
+      }
+    }
+
+  </script>
+
+  <div class="bar">
+      <i class="fas fa-bars" onclick="openNav()"></i>
+      <div id="navbar">
+        <div class="navbutton" style="width:2em;">
+          <a href="../index.html" style="height: 100%; padding:0;"><div class="arrowleft" style="border-top: .9em solid transparent; border-bottom: .9em solid transparent; border-right: .9em solid white;"></div></a>
+        </div>
+        <div class="navbutton" onclick="closeNav()">
+          <div class="arrowleft" style="25%"></div>
+          <div class="nametag" style="background-color: white;flex:50%;"><a href="../index.html#about">About</a></div>
+          <div class="arrowright" style="25%"></div>
+        </div>
+        <div class="navbutton" onclick="closeNav()" style="width:9em;">
+          <div class="arrowleft" style="25%"></div>
+          <div class="nametag" style="background-color: white;flex:50%;"><a href="../index.html#partners">Partners</a></div>
+          <div class="arrowright" style="25%"></div>
+        </div>
+        <div class="navbutton" onclick="closeNav()" style="width:8.5em;">
+          <div class="arrowleft" style="25%"></div>
+          <div class="nametag" style="background-color: white;flex:50%;"><a href="../index.html#contact">Contact</a></div>
+          <div class="arrowright" style="25%"></div>
+        </div>
+        <div onclick="closeNav()" class="navbutton" id="closebutton">
+          <div style="color: #2f308d;flex:50%;padding-left:1.5em;"><p>close</p></div>
+        </div>
+    </div>
+  </div>
+  <div id="navoverlay" onclick="closeNav()"></div>
+
+
     <h1 id="faqtitle">Questions We Are Frequently Asked</h1>
     <div id="faqcontainer">
       <div class="column">
@@ -48,7 +109,7 @@
       </div>
       <div class="column">
         <div>
-          <img src="Asset 5.png">
+          <img src="../Asset 5.png">
         </div>
         <div class="question">
           <div class="questionq">
@@ -73,6 +134,38 @@
           <div class="answer">
             <p>a large plant-eating domesticated mammal with solid hoofs and a flowing mane and tail, used for riding, racing, and to carry and pull loads.</p>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact">
+      <div>
+        <h2>Don't see your question?</h2>
+        <div>
+          <a href="emailto:cuhackit@g.clemson.edu" id="faqbutton">Drop us a line!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="decorativelines">
+      <div style="width: 100%;height:7px;background-color:#71c4dc"></div>
+      <div style="margin-top:3em;width: 30%;height:3px;background-color:#71c4dc"></div>
+    </div>
+
+    <div id="socials">
+      <div class="socialcontainer">
+        <div class="social"
+          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="socialcontainer">
+        <div class="social"
+          <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="socialcontainer">
+        <div class="social"
+          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
