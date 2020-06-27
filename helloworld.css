@@ -372,6 +372,8 @@ h2 {
   border-radius: 30px;
   box-shadow: 0 3px 20px #71c4dc;
   padding-bottom: 3em;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #contact h2 {
@@ -812,6 +814,12 @@ h4 {
     font-size: 14pt;
     margin: auto;
   }
+
+  #contact h2 {
+    margin-left: auto;
+    text-align: center;
+  }
+
   #form .button {
     width: 20%;
     height: 75px;
