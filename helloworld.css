@@ -2,8 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 p {
   font-size: 12pt;
 }
@@ -302,6 +300,8 @@ p {
   padding-bottom: 3em;
 }
 
+
+
 h2 {
   font-size: 3em;
 }
@@ -378,6 +378,7 @@ h2 {
   position: relative;
   float: right;
   margin-left: 15%;
+  flex: 75%;
 }
 
 #about, #contact {
@@ -411,9 +412,6 @@ h2 {
   align-content: center;
 }
 
-#contact .block {
-}
-
 #contact #partnerbutton {
   position: relative;
   top: 60px;
@@ -423,11 +421,9 @@ h2 {
 .block {
   z-index:2;
   margin: auto;
-  margin-left: 5%;
-  position:relative;
-  display: flex;
-  flex-wrap: wrap;
   width: 20%;
+  margin-left: 15%;
+
 }
 
 .contactblock > div {
@@ -550,6 +546,19 @@ h4 {
   width: 7em;
 }
 
+#contact > div > div {
+  width: 100%;
+}
+
+#faqbutton {
+  border-radius: 3em;
+  background-color: #71c4dc;
+  color: white;
+  padding: 1em;
+  font-weight: 600;
+  position: relative;
+  margin-left: 15%;
+}
 
 @keyframes grad {
   0% {
@@ -606,6 +615,10 @@ h4 {
 
   #landing, #about, #partners, #contact {
     margin-bottom: 90px !important;
+  }
+
+  h2 {
+    text-align: left;
   }
 
 
@@ -752,43 +765,54 @@ h4 {
     display: none;
   }
 
-#partnercloud a {
-  width: 45%;
-}
+  #partners h2 {
+    text-align: center;
+  }
 
-#partnerbutton {
-  font-size: 1.75em;
-}
+  #partnercloud a {
+    width: 45%;
+  }
+
+  #partnerbutton {
+    font-size: 1.75em;
+    position: relative;
+    top: 50px;
+  }
 
   #contact {
     text-align: center;
     right: auto;
     margin: auto;
     display: block;
-    height: 400px;
+    padding-bottom: 100px;
   }
+
   #contact .container {
     margin: auto;
   }
 
   #contact .block {
     display: block;
+    margin-left: auto;
   }
+  #contact > div > div {
+    width: 100%;
+  }
+
+
 
   #contact form {
     position: relative;
-    bottom: 200px;
     height: auto;
     margin-top: auto;
   }
 
   #contact form #item {
-    width: 55%;
     height: 75px;
     font-size: 14pt;
     margin: auto;
   }
-  #contact form .button {
+  #form .button {
     width: 20%;
     height: 75px;
     font-size: 14pt;
@@ -796,12 +820,9 @@ h4 {
   }
 
   #socials {
-    max-width: 100%;
-    width: 90%;
+    max-width: 75%;
     margin: auto;
-    margin-top: 250px;
-    position: relative;
-    bottom: 0;
+    margin-bottom: 150px;
   }
 
   #socials .social {
@@ -814,11 +835,17 @@ h4 {
   #faqcontainer {
     display: block;
   }
+
   .wrapper h1 {
     font-size: 3em;
     margin-left: 5%;
-
   }
+
+    .questionq {
+      font-size: 2em;
+
+    }
+
   #bottom {
     display: block;
   }
@@ -829,5 +856,9 @@ h4 {
   #faqtitle {
     margin-top: 20%;
     margin-left: 10%;
+  }
+  #faqbutton {
+    font-size: 1.75em;
+    margin-left: 0;
   }
 }
