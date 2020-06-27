@@ -376,11 +376,15 @@ h2 {
   flex-wrap: wrap;
 }
 
-#contact h2 {
+#contact h2, #contact #partnerbutton {
+  margin-right: 15%;
   position: relative;
   float: right;
+<<<<<<< HEAD
   margin-left: 15%;
   flex: 75%;
+=======
+>>>>>>> parent of 6b2610a... fixed up socials
 }
 
 #about, #contact {
@@ -389,13 +393,13 @@ h2 {
 
 #contact form {
   margin-right: 1%;
-  height: 30pt;
+  height: 35pt;
+  overflow: hidden;
 }
 #contact form #item {
   height: 100%;
   margin: auto;
   border: 1pt solid #71c4dc;
-  border-radius: 30px;
   position: relative;
 }
 
@@ -405,57 +409,41 @@ h2 {
   border: 0;
   height: 100%;
   cursor: pointer;
-  border-radius: 30px;
 }
 
-#contact > div {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
+<<<<<<< HEAD
 #contact #partnerbutton {
   position: relative;
   top: 60px;
-  left: 60px;
-}
+  left: 60px;}
 
 .block {
+  text-align: right;
   z-index:2;
   margin: auto;
+<<<<<<< HEAD
   width: 20%;
-  margin-left: 15%;
-
-}
+  margin-left: 15}
 
 .contactblock > div {
   padding:.5em 3em 3em 3em;
 }
 
-form .butto {
-  width:0;
-  height:0;
-  border-left:1em solid navy;
-  border-bottom:1em solid white;
-  border-top:1em solid white;
-  border-right:1em solid white;
-  transition: .25s ease;
-  position: relative;
-  margin-left: 10px;
-  bottom: -10px;
+input .button {
+  background-color: white;
+  border: 0;
 }
 
 #socials {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width:25%;
-  flex: 25%;
+  max-width:40%;
+  flex: 40%;
   position: relative;
   bottom: 35px;
   padding: 20px;
   transition: .25s ease;
-  margin: auto;
 }
 
 #socials:hover {
@@ -484,7 +472,7 @@ form .butto {
 
 
 .social:hover {
-  color: white !important;
+  color: navy !important;
   background-color: rgb(113, 196, 220, .5) !important;
   transition: .25s ease;
   cursor: pointer;
@@ -495,17 +483,8 @@ form .butto {
 }
 
 .socialcontainer:hover {
-  transform: scale(1.1) !important;
+  transform: scale(1.2) !important;
   transition: .25s ease;
-}
-
-#decorativeline {
-  background-color: navy;
-  width: .5%;
-  height: 150px;
-  position: relative;
-  bottom: 35px;
-  left: 100px;
 }
 
 h4 {
@@ -678,6 +657,7 @@ h4 {
   }
 
   #navoverlay {
+    /*display: none;*/
     display: block;
     top: 0;
     background-color: white;
