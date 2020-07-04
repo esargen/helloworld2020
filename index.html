@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=.5">
   <link href="helloworld.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://use.typekit.net/ugm7mjs.css">
+  <link rel="stylesheet" href="https://use.typekit.net/rkb0jcu.css">
+  <link rel="stylesheet" href="https://use.typekit.net/rkb0jcu.css">
   <script src="https://kit.fontawesome.com/1bcdd38cc2.js" crossorigin="anonymous"></script>
 </head>
 
@@ -14,7 +16,7 @@
   <div class="wrapper">
     <div id="flash2" class="grad2"></div>
     <div id="footer">
-      <a href="#"><div></div></a>
+      <a href="#landingcontainer"><div></div></a>
     </div>
 
 
@@ -49,27 +51,19 @@
         <i class="fas fa-bars" onclick="openNav()"></i>
         <div id="navbar">
           <div class="navbutton" onclick="closeNav()">
-            <div class="arrowleft" style="25%"></div>
-            <div class="nametag" style="background-color: white;flex:50%;"><a href="#about">About</a></div>
-            <div class="arrowright" style="25%"></div>
+            <div class="nametag" style="flex:50%;"><a href="#about">About</a></div>
           </div>
           <div class="navbutton" onclick="closeNav()" style="width:9em;">
-            <div class="arrowleft" style="25%"></div>
-            <div class="nametag" style="background-color: white;flex:50%;"><a href="#partners">Partners</a></div>
-            <div class="arrowright" style="25%"></div>
+            <div class="nametag" style="flex:50%;"><a href="#partners">Partners</a></div>
           </div>
           <div class="navbutton" onclick="closeNav()" style="width:8.5em;">
-            <div class="arrowleft" style="25%"></div>
-            <div class="nametag" style="background-color: white;flex:50%;"><a href="#contact">Contact</a></div>
-            <div class="arrowright" style="25%"></div>
+            <div class="nametag" style="flex:50%;"><a href="#contact">Contact</a></div>
           </div>
           <div class="navbutton" onclick="closeNav()">
-            <div class="arrowleft" style="25%"></div>
-            <div class="nametag" style="background-color: white;flex:50%;"><a href="faq/faq.html">FAQ</a></div>
-            <div class="arrowright" style="25%"></div>
+            <div class="nametag" style="flex:50%;"><a href="faq/faq.html">FAQ</a></div>
           </div>
           <div onclick="closeNav()" class="navbutton" id="closebutton">
-            <div style="color: #2f308d;flex:50%;padding-left:1.5em;"><p>close</p></div>
+            <div style="flex:50%;padding-left:1.5em;"><p>close</p></div>
           </div>
       </div>
     </div>
@@ -77,69 +71,68 @@
 
     <div id="flash" class="grad"></div>
 
-    <div id="landing">
-      <div class="futureimage">
-        <img style="width: 100%; transform:scale(1.5)" src="">
-      </div>
-      <div id="titlegroup">
-        <img src="Asset 4.png">
-        <div class="mobilestack">
-          <h3>Clemson's premiere freshman hackathon</h3>
-          <div class="buttons">
-            <a href="" class="applybutton">
-              <div>
-                <div class="arrowleft" style="25%"></div>
-                <div class="nametag" style="background-color: white;flex:50%;">Apply!</div>
-                <div class="arrowright" style="25%"></div>
-              </div>
-            </a>
-            <a href="" class="applybutton" style="margin-left: 1%;">
-              <div>
-                <div class="arrowleft" style="border-right:1em solid #71c4dc"></div>
-                <div class="nametag" style="background-color:#71c4dc;color: white;flex:50%;">Mentor!</div>
-                <div class="arrowright" style="border-left:1em solid #71c4dc"></div>
-              </div>
-            </a>
+    <div id="landingcontainer">
+      <div id="landing">
+        <div class="futureimage">
+          <img style="width: 100%" src="sun.svg">
+        </div>
+        <div id="titlegroup">
+          <img src="typelogo.svg">
+          <div class="mobilestack">
+            <h3>Clemson's premiere freshman hackathon</h3>
+            <div class="buttons">
+              <a href="" class="applybutton">
+                <div>
+                  <div class="nametag" style="flex:50%;">Apply!</div>
+                </div>
+              </a>
+              <a href="" class="applybutton">
+                <div>
+                  <div class="nametag" style="flex:50%;background-color:#f2b880;color:#eb8258;margin-left:5%">Mentor!</div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div id="about">
-      <div class="block">
-        <div class="text">
-          <h2>a little about us</h2>
-          <p>Join us for a day of building, learning, and fun at South Carolina’s premiere hackathon! Spend 24 hours coding and collaborating in the beautiful Watt Family Innovation Center at Clemson University while we handle the food, coffee, and snacks. Experience our Makerspace and Immersive Space, attend workshops, and interact with representatives from companies small and large.</p>
-          <p>No matter your major or level of experience, we want to see you create your next hack with us at HelloWorld!</p>
-          <a href="faq.html">
-          <div class="navbutton">
-            <div class="arrowleft" style="border-right:1em solid #71c4dc"></div>
-            <div class="nametag" style="background-color:#71c4dc;color: white;flex:50%;">FAQ</div>
-            <div class="arrowright" style="border-left:1em solid #71c4dc"></div>
+    <div id="hill"></div>
+    <div id="hill2"></div>
+    <div id="rest" style="position: relative; bottom: 950px; z-index:2;">
+      <div id="about">
+        <div class="block">
+          <div class="text">
+            <h2>a little about us</h2>
+            <p>Join us for a day of building, learning, and fun at South Carolina’s premiere hackathon! Spend 24 hours coding and collaborating in the beautiful Watt Family Innovation Center at Clemson University while we handle the food, coffee, and snacks. Experience our Makerspace and Immersive Space, attend workshops, and interact with representatives from companies small and large.</p>
+            <p>No matter your major or level of experience, we want to see you create your next hack with us at HelloWorld!</p>
+            <a href="faq.html">
+              <div class="navbutton">
+                <div class="nametag"><p>FAQ</p></div>
+              </div>
+            </a>
           </div>
-          </a>
-        </div>
-        <div class="futureimage2 image" >
+          <div class="futureimage2 image" >
+            <img src="tent.svg" style="width:100%;" />
+          </div>
         </div>
       </div>
-    </div>
 
     <div id="partners">
       <h2>Our partners</h2>
       <div id="partnercloud">
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
-        <a href="" class="futureimage"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
+        <a href="" class="futurepartner"><img src=""></a>
       </div>
       <a id="partnerbutton" href="">Become a partner!</a>
     </div>
@@ -158,12 +151,14 @@
           </div>
         </div>
       </div>
-      <div class="futureimage2 image" style="height: 200px"><img src="" /></div>
+      <div class="futureimage2 image" style="height: 200px; z-index:3;">
+         <img src="fire2.svg" style="position:relative;bottom: 50px;" />
+       </div>
     </div>
 
     <div class="decorativelines">
-      <div style="width: 100%;height:7px;background-color:#71c4dc"></div>
-      <div style="margin-top:3em;width: 30%;height:3px;background-color:#71c4dc"></div>
+      <div style="width: 100%;height:7px;"></div>
+      <div style="margin-top:3em;width: 30%;height:3px;"></div>
     </div>
     <div id="bottom">
       <div id="socials">
@@ -185,8 +180,29 @@
       </div>
     </div>
   </div>
-
   </div>
+
+  <script>
+    var wrapper = document.querySelector('.wrapper');
+    var nav = document.querySelector('.bar');
+    var landing = document.querySelector('#landing');
+    var about = document.querySelector('#about');
+    var hill = document.querySelector('#hill');
+    var partners = document.querySelector('#partners');
+    var contact = document.querySelector('#contact');
+    var footer = document.querySelector('#footer');
+
+     var big = (nav.scrollHeight + landing.scrollHeight + hill.scrollHeight + about.scrollHeight + partners.scrollHeight + contact.scrollHeight + footer.scrollHeight);
+     var hei = big;
+     document.addEventListener("DOMContentLoaded", () => {
+       wrapper.style.maxHeight = hei + 'px';
+       console.log(wrapper.style.maxHeight);
+       console.log(hei);
+     });
+     
+
+  </script>
+
 </body>
 
 </html>
