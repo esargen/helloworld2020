@@ -700,12 +700,13 @@ h4 {
       max-width: 70%;
       text-align: justify; }
       #about .block .text a .navbutton {
+        margin: auto;
         height: auto;
         font-size: 2em; }
         #about .block .text a .navbutton .nametag {
           margin: auto;
           width: auto;
-          padding: 5px 10px; }
+          padding: .5em 1em; }
 
   p {
     font-size: 2em; }
@@ -714,7 +715,8 @@ h4 {
     display: none; }
 
   #partners {
-    border-top-right-radius: 200px; }
+    border-top-right-radius: 200px;
+    padding-bottom: 7em; }
     #partners h2 {
       text-align: center; }
 
