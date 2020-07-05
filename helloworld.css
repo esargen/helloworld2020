@@ -1,6 +1,11 @@
 html {
   scroll-behavior: smooth; }
 
+body {
+  margin: 0; }
+  body * {
+    margin: auto; }
+
 p {
   font-size: 12pt; }
 
@@ -453,7 +458,7 @@ form .butto {
   max-width: 25%;
   flex: 25%;
   position: relative;
-  bottom: 35px;
+  bottom: 80px;
   padding: 20px;
   transition: .25s ease;
   margin: auto; }
@@ -487,6 +492,9 @@ form .butto {
 
 .decorativelines > div {
   background-color: #eb8258; }
+  .decorativelines > div:nth-child(2) {
+    margin: 3em;
+    margin-left: 0; }
 
 .socialcontainer {
   transition: .25s ease; }
