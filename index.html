@@ -96,11 +96,13 @@
         </div>
       </div>
     </div>
-    <div id="hill"></div>
-    <div id="hill2"></div>
+    <div id="parallax-group">
+      <div id="hill" class="parallax"></div>
+      <div id="hill2" class="parallax"></div>
+    </div>
     <div id="rest" style="position: relative; bottom: 950px; z-index:2;">
       <div id="about">
-        <div class="block">
+        <div class="block" class="parallax">
           <div class="text">
             <h2>a little about us</h2>
             <p>Join us for a day of building, learning, and fun at South Carolina’s premiere hackathon! Spend 24 hours coding and collaborating in the beautiful Watt Family Innovation Center at Clemson University while we handle the food, coffee, and snacks. Experience our Makerspace and Immersive Space, attend workshops, and interact with representatives from companies small and large.</p>
@@ -201,7 +203,23 @@
      });
 
   </script>-->
+  <script>
+    window.addEventListener('scroll', function(e) {
+        var hill = document.querySelectorAll(".parallax");
+        var container = document.querySelector("#parallax-group");
 
+        var scrolled = window.pageYOffset;
+        var rate = scrolled * .15;
+        var rate2 = scrolled * -.15;
+
+        hill[0].style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+        hill[1].style.transform = 'translate3D(0px, '+rate2+'px, 0px)';
+
+        container.style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+    })
+
+
+  </script>
 </body>
 
 </html>
