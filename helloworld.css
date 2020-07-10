@@ -23,7 +23,7 @@ p {
     width: 100%; }
 
 .futureimage2 {
-  width: 20em;
+  width: 15em;
   margin: 2em auto; }
   .futureimage2 img {
     width: 100%; }
@@ -207,7 +207,7 @@ p {
   font-weight: 500;
   font-size: 1.3em;
   position: relative;
-  bottom: 1.75em;
+  bottom: 1em;
   width: 40%; }
 
 .buttons {
@@ -219,22 +219,21 @@ p {
   height: 50px; }
 
 .applybutton {
-  width: 5em;
   transition: .5s ease;
-  height: 50px; }
+  height: 50px;
+  flex: 45%;
+  width: 45%; }
   .applybutton img {
     width: 100%; }
   .applybutton > div {
-    display: flex;
-    flex-wrap: wrap;
-    width: 10em;
-    height: 2em; }
+    max-width: 100%; }
   .applybutton:hover {
     transform: scale(1.05);
     transition: .5s ease; }
   .applybutton .nametag {
     font-size: 1.7em;
-    padding: .2em; }
+    padding: .2em;
+    box-sizing: border-box; }
 
 .nametag {
   font-size: 1.15em;
@@ -316,7 +315,8 @@ h2 {
   text-align: justify;
   padding: 1em 2em 1em 2em; }
   #about .text .navbutton {
-    height: auto; }
+    height: auto;
+    margin-top: 2em; }
     #about .text .navbutton .nametag {
       margin: auto;
       width: 150px;
@@ -373,7 +373,6 @@ h2 {
 #contact {
   position: relative;
   right: 0;
-  width: 100%;
   margin: auto;
   margin-bottom: 5em;
   margin-top: 2em;
@@ -381,50 +380,45 @@ h2 {
   background-color: #2a9d8f;
   border-radius: 30px;
   box-shadow: 0px 10px 3px rgba(16, 11, 20, 0.2);
-  padding-bottom: 4em;
+  padding: 2em 2em 4em 2em;
   display: flex;
-  flex-wrap: wrap; }
-
-#contact h2 {
-  position: relative;
-  float: right;
-  margin-left: 15%;
-  flex: 75%; }
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  color: #2a9d8f; }
+  #contact h2 {
+    position: relative;
+    float: right;
+    margin-left: 15%;
+    flex: 75%;
+    color: #264653; }
+  #contact form {
+    margin-right: 1%;
+    height: 30pt; }
+    #contact form #item {
+      height: 100%;
+      margin: auto;
+      border: 1pt solid #2a9d8f;
+      border-radius: 30px;
+      position: relative; }
+    #contact form .button {
+      background-color: #2a9d8f;
+      margin: auto;
+      border: 0;
+      height: 100%;
+      cursor: pointer;
+      border-radius: 30px; }
+  #contact > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center; }
+    #contact > div > .block {
+      margin-left: 15%;
+      margin-top: 5%; }
+    #contact > div > div {
+      margin-top: 3em; }
 
 #about {
   color: #f2b880; }
-
-#contact {
-  color: #2a9d8f; }
-  #contact h2 {
-    color: #264653; }
-
-#contact > div > .block {
-  margin-left: 15%; }
-
-#contact form {
-  margin-right: 1%;
-  height: 30pt; }
-
-#contact form #item {
-  height: 100%;
-  margin: auto;
-  border: 1pt solid #2a9d8f;
-  border-radius: 30px;
-  position: relative; }
-
-#contact form .button {
-  background-color: #2a9d8f;
-  margin: auto;
-  border: 0;
-  height: 100%;
-  cursor: pointer;
-  border-radius: 30px; }
-
-#contact > div {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center; }
 
 #contact #partnerbutton {
   position: relative;
@@ -529,20 +523,24 @@ h4 {
   justify-content: space-between;
   max-width: 85%;
   margin: auto;
+  margin-top: 2em;
   padding-bottom: 40px; }
+  #faqcontainer .column {
+    max-width: 45%;
+    flex: 45%;
+    overflow: hidden; }
+    #faqcontainer .column .question {
+      margin-bottom: 1.5em; }
+    #faqcontainer .column .answer {
+      text-align: justify;
+      max-width: 85%;
+      margin-top: 1em; }
 
-#faqcontainer .column {
-  max-width: 45%;
-  flex: 45%;
-  overflow: hidden; }
-
-#faqcontainer .column .answer {
-  text-align: justify;
-  max-width: 85%; }
-
-#faqcontainer img {
-  margin-left: 30%;
-  width: 7em; }
+#faqillus {
+  margin: 2em; }
+  #faqillus img {
+    margin-left: 30%;
+    width: 7em; }
 
 #contact > div > div {
   width: 100%; }
@@ -682,20 +680,19 @@ h4 {
   #titlegroup {
     text-align: center;
     float: none;
-    margin: 5em auto 10em auto;
+    margin: 2em auto 10em auto;
     max-width: 75%; }
 
   #titlegroup h1 {
     font-size: 8em; }
 
   #titlegroup h3 {
-    font-size: 2.5em;
-    margin-top: 3em;
+    font-size: 2em;
+    margin-top: 1.5em;
     width: 100%; }
 
   .buttons {
     margin: auto;
-    margin-top: -75px;
     width: 85%; }
 
   .applybutton {
@@ -707,8 +704,11 @@ h4 {
     #about .block .text {
       max-width: 70%;
       text-align: justify; }
+      #about .block .text h2 {
+        margin-bottom: .5em; }
       #about .block .text a .navbutton {
         margin: auto;
+        margin-top: 2em;
         height: auto;
         font-size: 2em; }
         #about .block .text a .navbutton .nametag {
@@ -741,31 +741,27 @@ h4 {
     right: auto;
     margin: auto;
     display: block;
-    padding-bottom: 100px; }
-
-  #contact .container {
-    margin: auto; }
-
-  #contact .block {
-    display: block;
-    margin-left: auto; }
-
-  #contact > div > div {
-    width: 100%; }
-
-  #contact form {
-    position: relative;
-    height: auto;
-    margin-top: auto; }
-
-  #contact form #item {
-    height: 75px;
-    font-size: 14pt;
-    margin: auto; }
-
-  #contact h2 {
-    margin-left: auto;
-    text-align: center; }
+    padding: 2em 2em 4em 2em; }
+    #contact .container {
+      margin: auto; }
+    #contact > div > .block {
+      display: block;
+      margin: auto;
+      margin-left: auto;
+      margin-top: 5%; }
+    #contact > div > div {
+      width: 100%; }
+    #contact form {
+      position: relative;
+      height: auto;
+      margin-top: auto; }
+      #contact form #item {
+        height: 75px;
+        font-size: 14pt;
+        margin: auto; }
+    #contact h2 {
+      margin-left: auto;
+      text-align: center; }
 
   #form .button {
     width: 20%;
@@ -777,9 +773,8 @@ h4 {
     max-width: 75%;
     margin: auto;
     margin-bottom: 150px; }
-
-  #socials .social {
-    font-size: 50pt; }
+    #socials .social {
+      font-size: 50pt; }
 
   .decorativelines {
     display: none; }
@@ -793,6 +788,9 @@ h4 {
 
   .questionq {
     font-size: 2em; }
+
+  .answer p {
+    text-align: left; }
 
   #bottom {
     display: block; }
