@@ -183,7 +183,7 @@ p {
   width: 100%;
   margin: 0;
   padding: 0;
-  animation: fadein 3s ease;
+  animation: fadein 2s ease;
   >div {
     margin: 0;
     padding: 0;
@@ -765,12 +765,13 @@ h4 {
 
 @media (max-device-width: 480px) {
 
+
+
   #firsttrees {
     display: none;
   }
 
   #landing, #about, #partners, #contact {
-    margin-bottom: 90px !important;
   }
 
   h2 {
@@ -869,6 +870,9 @@ h4 {
     width: 90%;
     margin: auto;
     margin-top: 10em;
+    .futureimage {
+      width: 50%;
+    }
   }
 
   .applybutton {
@@ -899,7 +903,7 @@ h4 {
   }
 
   #parallax-group {
-      bottom: 550px;
+      bottom: 625px;
   }
 
   #hill2 {
@@ -919,6 +923,7 @@ h4 {
   .buttons {
     margin: auto;
     width: 85%;
+    float: none;
   }
 
   .applybutton {
@@ -931,6 +936,7 @@ h4 {
     display: none;
   }
   #about {
+    margin-top: -150px;
     #hill2 {
       bottom: 0;
     }
@@ -974,6 +980,7 @@ h4 {
     border-top-right-radius: 200px;
     padding-bottom: 7em;
     padding-top: 5em;
+    margin-bottom: 90px !important;
     h2 {
     text-align: center;
     }
@@ -995,6 +1002,7 @@ h4 {
     margin: auto;
     display: block;
     padding: 2em 2em 4em 2em;
+    margin-bottom: 90px !important;
     .container {
       margin: auto;
     }

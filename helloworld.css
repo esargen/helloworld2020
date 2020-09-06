@@ -150,7 +150,7 @@ p {
   width: 100%;
   margin: 0;
   padding: 0;
-  animation: fadein 3s ease; }
+  animation: fadein 2s ease; }
   #firsttrees > div {
     margin: 0;
     padding: 0;
@@ -620,9 +620,6 @@ h4 {
   #firsttrees {
     display: none; }
 
-  #landing, #about, #partners, #contact {
-    margin-bottom: 90px !important; }
-
   h2 {
     text-align: left; }
 
@@ -703,6 +700,8 @@ h4 {
     width: 90%;
     margin: auto;
     margin-top: 10em; }
+    #landing .futureimage {
+      width: 50%; }
 
   .applybutton {
     display: block;
@@ -728,7 +727,7 @@ h4 {
     width: 100%; }
 
   #parallax-group {
-    bottom: 550px; }
+    bottom: 625px; }
 
   #hill2 {
     border-top-left-radius: 100%;
@@ -743,7 +742,8 @@ h4 {
 
   .buttons {
     margin: auto;
-    width: 85%; }
+    width: 85%;
+    float: none; }
 
   .applybutton {
     flex: 40% !important;
@@ -752,27 +752,29 @@ h4 {
   #trees2 {
     display: none; }
 
-  #about #hill2 {
-    bottom: 0; }
-  #about .block {
-    display: block;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0; }
-    #about .block .text {
-      max-width: 70%;
-      text-align: justify;
-      margin-left: auto; }
-      #about .block .text h2 {
-        margin-bottom: .5em; }
-      #about .block .text a .navbutton {
-        margin: auto;
-        margin-top: 2em;
-        height: auto;
-        font-size: 2em; }
-        #about .block .text a .navbutton .nametag {
+  #about {
+    margin-top: -150px; }
+    #about #hill2 {
+      bottom: 0; }
+    #about .block {
+      display: block;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; }
+      #about .block .text {
+        max-width: 70%;
+        text-align: justify;
+        margin-left: auto; }
+        #about .block .text h2 {
+          margin-bottom: .5em; }
+        #about .block .text a .navbutton {
           margin: auto;
-          width: auto;
-          padding: .5em 1em; }
+          margin-top: 2em;
+          height: auto;
+          font-size: 2em; }
+          #about .block .text a .navbutton .nametag {
+            margin: auto;
+            width: auto;
+            padding: .5em 1em; }
 
   p {
     font-size: 2em; }
@@ -783,7 +785,8 @@ h4 {
   #partners {
     border-top-right-radius: 200px;
     padding-bottom: 7em;
-    padding-top: 5em; }
+    padding-top: 5em;
+    margin-bottom: 90px !important; }
     #partners h2 {
       text-align: center; }
 
@@ -800,7 +803,8 @@ h4 {
     right: auto;
     margin: auto;
     display: block;
-    padding: 2em 2em 4em 2em; }
+    padding: 2em 2em 4em 2em;
+    margin-bottom: 90px !important; }
     #contact .container {
       margin: auto; }
     #contact > div {
