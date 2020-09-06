@@ -39,7 +39,18 @@ p {
   position: relative;
   font-family: 'rooney-sans', sans-serif;
   background-color: #264653;
+  color: #f2b880;
+  height: 485vh; }
+
+.faqwrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-family: 'rooney-sans', sans-serif;
+  background-color: #264653;
   color: #f2b880; }
+  .faqwrapper a {
+    text-decoration: none; }
 
 .grad {
   animation: grad 4s ease;
@@ -138,7 +149,8 @@ p {
   pointer-events: none;
   width: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  animation: fadein 3s ease; }
   #firsttrees > div {
     margin: 0;
     padding: 0;
@@ -148,11 +160,11 @@ p {
       max-width: 50%; }
     #firsttrees > div:nth-child(2) {
       margin-left: -600px;
-      z-index: -2;
+      z-index: -1;
       max-width: 30%; }
     #firsttrees > div:nth-child(3) {
       max-width: 45%;
-      z-index: -1; }
+      z-index: 0; }
     #firsttrees > div > img {
       width: 100%; }
 
@@ -198,7 +210,8 @@ p {
   #titlegroup img {
     position: relative;
     width: 100%;
-    animation: fadein 3s; }
+    animation: fadein 3s;
+    z-index: -3; }
   #titlegroup h3 {
     font-weight: 500;
     font-size: 1.3em;
@@ -542,7 +555,8 @@ h4 {
   max-width: 85%;
   margin: auto;
   margin-top: 2em;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  margin-bottom: 100px; }
   #faqcontainer .column {
     max-width: 45%;
     flex: 45%;
