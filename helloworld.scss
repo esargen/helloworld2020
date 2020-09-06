@@ -22,7 +22,11 @@ p {
   font-size: 12pt;
 }
 
-
+#rest {
+  position: relative;
+  bottom: 2850px;
+  z-index:1;
+}
 
 #landing, #about, #partners, #partners img, #partners h2 {
   z-index: 2;
@@ -46,48 +50,6 @@ p {
   img {
     width: 100%;
   }
-}
-
-.flash {
-  position: absolute;
-  z-index: 1;
-}
-
-#flash {
-  background: radial-gradient(farthest-corner at 50% 50%, $horse 0%, transparent 65%);
-  opacity: 30%;
-  position: absolute;
-  height: 40em;
-  width: 60em;
-  right: 0;
-  z-index: 1;
-  display: none;
-}
-#flash2 {
-  background: radial-gradient($horse 0%, transparent 55%);
-  opacity: 5%;
-  position: absolute;
-  height: 75em;
-  width: 75em;
-  top: 15em;
-  left: -30em;
-  z-index: 1;
-  animation-delay: 2s;
-  display: none;
-
-}
-
-#flash3 {
-  background: radial-gradient(farthest-corner at 85% 50%, $horse 0%, transparent 65%);
-  opacity: 65%;
-  position: absolute;
-  height: 60em;
-  width: 60em;
-  right: 0;
-  bottom: 5em;
-  z-index: 1;
-  display: none;
-
 }
 
 .wrapper {
@@ -185,7 +147,7 @@ p {
 .bar {
   width: 100%;
   position: fixed;
-  z-index: 3;
+  z-index: 10;
 }
 .bar i {
   display: none;
@@ -199,67 +161,102 @@ p {
   display: none;
 }
 
+#firsttrees {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  >div {
+    margin: 0;
+    padding: 0;
+    flex: 30%;
+    width: 30%;
+    &:nth-child(1) {
+      max-width: 50%;
+    }
+    &:nth-child(2) {
+      margin-left: -600px;
+      z-index: -2;
+      max-width: 30%;
+    }
+    &:nth-child(3) {
+      max-width: 45%;
+      z-index: -1;
+    }
+    >img {
+      width: 100%;
+    }
+  }
+}
 
 #landingcontainer {
   width: 100%;
   padding-top: 80px;
-  padding-bottom: 300px;
+  padding-bottom: 750px;
   position: relative;
   bottom: 90px;
   margin: 0;
+  overflow: hidden;
   background-color: $pillowfort;
 }
 
 #landing {
   display: flex;
   flex-wrap: wrap;
-  margin: 6em 3em 3em 1em;
+  margin: auto;
+  margin-top: 8em;
   z-index: 1;
-  width: 100%;
+  width: 60%;
   position: relative;
+  justify-content: space-between;
   .futureimage {
     animation: floaty 3s ease;
     animation-iteration-count: 1;
     bottom: 0em;
     position: relative;
+    width: 30%;
   }
 }
 
 .mobilestack {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   align-content: center;
   h3 {
     margin-top: 30px;
+    color: $horse;
   }
 }
 
 
 #titlegroup {
   float: right;
-  margin-right: 15%;
   margin-top: 5%;
   max-width: 40%;
+  flex: 40%;
+  img {
+    position: relative;
+    width: 100%;
+    animation: fadein 3s;
+    z-index: -3;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 1.3em;
+    position: relative;
+    bottom: 1em;
+  }
  }
-
-#titlegroup img {
-  position: relative;
-  width: 70%;
-  margin: 2em;
-  animation: fadein 3s;
-}
-#titlegroup h3 {
-  font-weight: 500;
-  font-size: 1.3em;
-  position: relative;
-  bottom: 1em;
-  width: 40%;
-}
 
 .buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content:space-between;
+  float: right;
   width: 50%;
   margin-left: 2%;
   height: 50px;
@@ -296,7 +293,7 @@ p {
   width: 100%;
   height: 100%;
   align-items: center;
-  box-shadow: 2px 3px 1px adjust-color($pillowfort, $lightness: -60%, $alpha: -.8);
+  box-shadow: 1px 5px 5px adjust-color($pillowfort, $lightness: -60%, $alpha: -.8);
   border-radius: 15px;
 }
 
@@ -320,11 +317,10 @@ p {
   height: 600px;
   overflow: hidden;
   position: relative;
-  bottom: 450px;
+  bottom: 775px;
 }
 
 #hill {
-  z-index: 1;
   background-color: $spruce;
   border-top-right-radius: 100%;
   height: 600px;
@@ -333,20 +329,18 @@ p {
   //bottom: 450px;
 }
 #hill2 {
-  border-top-left-radius: 100%;
   height: 400px;
-  z-index: 2;
+  z-index: 3;
   position: relative;
-  box-shadow: 0px -5px 20px adjust-color($pillowfort, $lightness: -60%, $alpha: -.5);
-  //bottom: 950px;
-  bottom: 400px;
-  background-color: $deepwoods;
-
+  bottom: 300px;
+  img {
+    width: 100%;
+  }
 }
 #about {
-  z-index: 2;
   width: 100%;
-  margin-top: 475px;
+  position: relative;
+  bottom: 1000px;
 }
 
 #about > div {
@@ -356,10 +350,14 @@ p {
 }
 
 #about .block {
+  position: relative;
   width: 100%;
+  z-index: 4;
   background-color: $deepwoods;
   //box-shadow: 0px 10px 3px adjust-color($pillowfort, $lightness: -60%, $alpha: -.8);
-  padding-bottom: 3em;
+  padding-bottom: 15em;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
 }
 
 
@@ -373,11 +371,14 @@ h2 {
   column-gap: .25em;*/
 }
 #about .text {
+  z-index: 4;
   max-width: 35%;
-  margin-left: 10%;
+  margin-left: 20%;
   flex: 35%;
   text-align: justify;
   padding: 1em 2em 1em 2em;
+  position: relative;
+  bottom: 100px;
   .navbutton {
     height: auto;
     margin-top: 2em;
@@ -400,14 +401,22 @@ h2 {
   padding: 1em 2em 1em 2em;
 }
 
-#partners {
+#trees2 {
   position: relative;
+  bottom: 1750px;
+  z-index: 5;
+  img {
+    width: 110%;
+    margin-left: -5%;
+  }
+}
+
+#partners {
   margin: auto;
   text-align: center;
-  padding: 3em 0 5em 0;
+  padding: 20em 0 5em 0;
   background-color: $spruce;
   width: 100%;
-  border-top-right-radius: 40%;
   box-shadow: 0px 0px 20px adjust-color($pillowfort, $lightness: -60%, $alpha: -.8);
 }
 
@@ -453,17 +462,13 @@ h2 {
   background-color: $spruce;
   border-radius: 30px;
   box-shadow: 0px 10px 3px adjust-color($pillowfort, $lightness: -60%, $alpha: -.8);
-  padding: 2em 2em 4em 2em;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 4em 2em 4em 2em;
   box-sizing: border-box;
   color: $spruce;
   h2 {
     position: relative;
-    float: right;
-    margin-left: 15%;
-    flex: 75%;
     color: $deepwoods;
+    margin: 0;
   }
   form {
     margin-right: 1%;
@@ -484,17 +489,36 @@ h2 {
       border-radius: 30px;
     }
   }
+  .faq {
+    width: 75%;
+    justify-content: space-between;
+  }
   > div {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    > .block {
-      margin-left: 15%;
-      margin-top: 5%;
+    margin-left: 6.5%;
+    .image2 {
+      height: 150px;
+      margin-top: -215px;
+      position: absolute;
+      margin-left: 60%;
+      img {
+        height: 100%;
+      }
     }
-    > div {
-      margin-top: 3em;
+  }
+  .image {
+    height: 300px;
+    position: absolute;
+    margin-top: 150px;
+    right: 40px;
+    img {
+      height: 100%;
     }
+  }
+  .block {
+    margin-left: 5%;
   }
 }
 
@@ -514,10 +538,8 @@ h2 {
 }
 
 .block {
-  z-index:2;
-  margin: auto;
+  z-index:3;
   width: 20%;
-
 }
 
 .contactblock > div {
@@ -564,13 +586,13 @@ form .butto {
   width: 40px;
   height: 40px;
   position:relative;
-  z-index:2;
+  z-index:3;
   transform: rotate(45deg);
 }
 
 .social i {
   position:relative;
-  z-index: 3;
+  z-index: 4;
   transform: rotate(-45deg);
 }
 
@@ -623,6 +645,7 @@ h4 {
 #faqtitle {
   margin-left: 5%;
   margin-top: 5%;
+  font-size: 4em;
 }
 
 #faqcontainer {
@@ -656,9 +679,6 @@ h4 {
   }
 }
 
-#contact > div > div {
-  width: 100%;
-}
 
 #faqbutton {
   border-radius: 3em;
@@ -667,7 +687,6 @@ h4 {
   padding: 1em;
   font-weight: 600;
   position: relative;
-  margin-left: 15%;
 }
 
 @keyframes grad {
@@ -731,6 +750,10 @@ h4 {
 
 @media (max-device-width: 480px) {
 
+  #firsttrees {
+    display: none;
+  }
+
   #landing, #about, #partners, #contact {
     margin-bottom: 90px !important;
   }
@@ -739,6 +762,11 @@ h4 {
     text-align: left;
   }
 
+  #rest {
+    bottom: 1300px;
+    z-index: 3;
+
+  }
 
   #flash, #flash2, #flash3 {
     display: none;
@@ -816,9 +844,14 @@ h4 {
     margin-left: 1em;
   }
 
+  #landingcontainer {
+    padding-bottom: 600px;
+  }
+
   #landing {
     display: block;
     max-width: 100%;
+    width: 90%;
     margin: auto;
     margin-top: 10em;
   }
@@ -844,34 +877,56 @@ h4 {
     margin: 2em auto 10em auto;
     max-width: 75%; }
 
-  #titlegroup h1 {
-    font-size: 8em; }
-
   #titlegroup h3 {
     font-size: 2em;
     margin-top: 1.5em;
     width: 100%;
   }
 
+  #parallax-group {
+      bottom: 550px;
+  }
 
-.buttons {
-  margin: auto;
-  width: 85%;
-}
+  #hill2 {
+    border-top-left-radius: 100%;
+    height: 400px;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px -5px 20px rgba(16, 11, 20, 0.5);
+    bottom: 400px;
+    background-color: #264653;
+    img {
+      display: none;
+    }
+  }
 
-.applybutton {
-  flex: 40% !important;
-  width: 40% !important;
-}
+
+  .buttons {
+    margin: auto;
+    width: 85%;
+  }
+
+  .applybutton {
+    flex: 40% !important;
+    width: 40% !important;
+  }
 
 
-
+  #trees2 {
+    display: none;
+  }
   #about {
+    #hill2 {
+      bottom: 0;
+    }
     .block {
       display: block;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
      .text {
       max-width: 70%;
       text-align: justify;
+      margin-left: auto;
       h2 {
         margin-bottom: .5em;
       }
@@ -903,6 +958,7 @@ h4 {
   #partners {
     border-top-right-radius: 200px;
     padding-bottom: 7em;
+    padding-top: 5em;
     h2 {
     text-align: center;
     }
@@ -928,6 +984,8 @@ h4 {
       margin: auto;
     }
     > div {
+      margin-left: auto;
+      display: block;
       > .block {
         display: block;
         margin: auto;
@@ -936,6 +994,7 @@ h4 {
       }
       > div {
         width: 100%;
+        margin-top: 3em;
       }
     }
     form {
@@ -951,6 +1010,9 @@ h4 {
     h2 {
       margin-left: auto;
       text-align: center;
+    }
+    .image {
+      display: none;
     }
   }
 

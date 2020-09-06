@@ -72,23 +72,29 @@
     <div id="flash" class="grad"></div>
 
     <div id="landingcontainer">
+      <div id="firsttrees">
+        <div class="firsttree">
+          <img src="foretree.png">
+        </div>
+        <div class="firsttree">
+          <img src="backtree.png">
+        </div>
+        <div class="firsttree">
+          <img src="midtree.png">
+        </div>
+      </div>
       <div id="landing">
         <div class="futureimage">
           <img style="width: 100%" src="sun.svg" alt="sun">
         </div>
         <div id="titlegroup">
-          <img src="typelogo.svg" alt="Hello World">
+          <img src="title.png" alt="Hello World">
           <div class="mobilestack">
             <h3>Clemson's premiere freshman hackathon</h3>
             <div class="buttons">
-              <a href="" class="applybutton">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeOQGq58yr8AliFswQaZ8zizYfVj8gdv6L8B-r6ZRjftwgGAg/viewform?usp=sf_link" class="applybutton">
                 <div>
-                  <div class="nametag" style="flex:50%;">Apply!</div>
-                </div>
-              </a>
-              <a href="" class="applybutton">
-                <div>
-                  <div class="nametag" style="flex:50%;background-color:#f2b880;color:#eb8258;margin-left:5%">Mentor!</div>
+                  <div class="nametag" style="flex:50%;">I want in!!</div>
                 </div>
               </a>
             </div>
@@ -98,27 +104,26 @@
     </div>
     <div id="parallax-group">
       <div id="hill" class="parallax"></div>
-      <div id="hill2" class="parallax"></div>
     </div>
-    <div id="rest" style="position: relative; bottom: 950px; z-index:2;">
-      <div id="about">
-        <div class="block" class="parallax">
-          <div class="text">
-            <h2>a little about us</h2>
-            <p>Join us for a day of building, learning, and fun at South Carolina’s premiere hackathon! Spend 24 hours coding and collaborating in the beautiful Watt Family Innovation Center at Clemson University while we handle the food, coffee, and snacks. Experience our Makerspace and Immersive Space, attend workshops, and interact with representatives from companies small and large.</p>
-            <p>No matter your major or level of experience, we want to see you create your next hack with us at HelloWorld!</p>
-            <a href="faq.html">
-              <div class="navbutton">
-                <div class="nametag"><p>FAQ</p></div>
-              </div>
-            </a>
-          </div>
-          <div class="futureimage2 image" >
-            <img src="tent.svg" alt="camping tent" style="width:100%;" />
-          </div>
+    <div id="about" class="parallax">
+      <div id="hill2"><img src="trees.png"></div>
+      <div class="block">
+        <div class="text">
+          <h2>a little about us</h2>
+          <p>Join us for a day of building, learning, and fun at South Carolina’s premiere hackathon! Spend 24 hours coding and collaborating in the beautiful Watt Family Innovation Center at Clemson University while we handle the food, coffee, and snacks. Experience our Makerspace and Immersive Space, attend workshops, and interact with representatives from companies small and large.</p>
+          <p>No matter your major or level of experience, we want to see you create your next hack with us at HelloWorld!</p>
+          <a href="faq.html">
+            <div class="navbutton">
+              <div class="nametag"><p>FAQ</p></div>
+            </div>
+          </a>
         </div>
       </div>
-
+    </div>
+    <div id="trees2" class="parallax">
+      <img src="trees2.png">
+    </div>
+    <div id="rest" style="">
     <div id="partners">
       <h2>Our partners</h2>
       <div id="partnercloud">
@@ -145,18 +150,19 @@
         <div class="block">
           <div>
             <div class="container">
-              <form method="post" action="">
+              <form method="get" action="https://docs.google.com/forms/d/e/1FAIpQLSeOQGq58yr8AliFswQaZ8zizYfVj8gdv6L8B-r6ZRjftwgGAg/viewform?usp=sf_link">
                 <input type="text" id="item" name="item" placeholder="   Your email here">
                 <input class="butto" type="submit" value="">
               </form>
             </div>
           </div>
         </div>
-      </div>
-      <div class="futureimage2 image" style="height: 200px; z-index:3;">
-         <img src="fire2.svg" style="position:relative;bottom: 50px;" />
+        <div class="image">
+           <img src="telescope.png" />
        </div>
+      </div>
     </div>
+
 
     <div class="decorativelines">
       <div style="width: 100%;height:7px;"></div>
@@ -207,16 +213,33 @@
     window.addEventListener('scroll', function(e) {
         var hill = document.querySelectorAll(".parallax");
         var container = document.querySelector("#parallax-group");
+        var trees = document.querySelectorAll(".firsttree");
 
         var scrolled = window.pageYOffset;
         var rate = scrolled * .15;
+        var rate4 = scrolled * .25;
         var rate2 = scrolled * -.15;
+        var rate3 = scrolled * -.75;
 
-        hill[0].style.transform = 'translate3D(0px, '+rate+'px, 0px)';
-        hill[1].style.transform = 'translate3D(0px, '+rate2+'px, 0px)';
+        if (window.matchMedia('(max-device-width: 480px)').matches) {
+          container.style.transform = 'translate3D(0px, '+rate4+'px, 0px)';
 
-        container.style.transform = 'translate3D(0px, '+rate+'px, 0px)';
-    })
+        } else {
+          hill[0].style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+          hill[1].style.transform = 'translate3D(0px, '+rate2+'px, 0px)';
+          hill[2].style.transform = 'translate3D(0px, '+rate3+'px, 0px)';
+
+          container.style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+
+          trees[1].style.transform = 'translate3D(0px, '+rate4+'px, 0px)';
+          trees[2].style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+      };
+    });
+
+
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
   </script>
