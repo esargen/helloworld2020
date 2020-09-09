@@ -24,7 +24,7 @@ p {
 
 #rest {
   position: relative;
-  bottom: 2850px;
+  bottom: 2600px;
   z-index:1;
 }
 
@@ -59,7 +59,6 @@ p {
   font-family: 'rooney-sans', sans-serif;
   background-color: $deepwoods;
   color: $horse;
-  height: 485vh;
 }
 
 .faqwrapper {
@@ -94,7 +93,7 @@ p {
   margin-bottom: 15px;
   margin-left: 20px;
   padding: 5px;
-  z-index: 3;
+  z-index: 12;
 }
 #footer a {
   text-decoration: none;
@@ -369,9 +368,6 @@ p {
   z-index: 4;
   background-color: $deepwoods;
   //box-shadow: 0px 10px 3px adjust-color($pillowfort, $lightness: -60%, $alpha: -.8);
-  padding-bottom: 15em;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%;
 }
 
 
@@ -428,7 +424,7 @@ h2 {
 #partners {
   margin: auto;
   text-align: center;
-  padding: 20em 0 5em 0;
+  padding: 5em 0 5em 0;
   background-color: $spruce;
   width: 100%;
   box-shadow: 0px 0px 20px adjust-color($pillowfort, $lightness: -60%, $alpha: -.8);

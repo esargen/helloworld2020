@@ -11,7 +11,7 @@ p {
 
 #rest {
   position: relative;
-  bottom: 2850px;
+  bottom: 2600px;
   z-index: 1; }
 
 #landing, #about, #partners, #partners img, #partners h2 {
@@ -39,8 +39,7 @@ p {
   position: relative;
   font-family: 'rooney-sans', sans-serif;
   background-color: #264653;
-  color: #f2b880;
-  height: 485vh; }
+  color: #f2b880; }
 
 .faqwrapper {
   max-width: 100%;
@@ -72,7 +71,7 @@ p {
   margin-bottom: 15px;
   margin-left: 20px;
   padding: 5px;
-  z-index: 3; }
+  z-index: 12; }
 
 #footer a {
   text-decoration: none;
@@ -306,10 +305,7 @@ p {
   position: relative;
   width: 100%;
   z-index: 4;
-  background-color: #264653;
-  padding-bottom: 15em;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%; }
+  background-color: #264653; }
 
 h2 {
   font-size: 3em;
@@ -357,7 +353,7 @@ h2 {
 #partners {
   margin: auto;
   text-align: center;
-  padding: 20em 0 5em 0;
+  padding: 5em 0 5em 0;
   background-color: #2a9d8f;
   width: 100%;
   box-shadow: 0px 0px 20px rgba(16, 11, 20, 0.2); }
