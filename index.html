@@ -94,7 +94,7 @@
             <div class="buttons">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSeOQGq58yr8AliFswQaZ8zizYfVj8gdv6L8B-r6ZRjftwgGAg/viewform?usp=sf_link" class="applybutton">
                 <div>
-                  <div class="nametag" style="flex:50%;">I want in!</div>
+                  <div class="nametag" style="flex:50%;">Apply!</div>
                 </div>
               </a>
             </div>
@@ -216,7 +216,7 @@
         var container = document.querySelector("#parallax-group");
         var trees = document.querySelectorAll(".firsttree");
 
-        var scrolled = window.pageYOffset;
+        var scrolled = Math.ceil(window.pageYOffset / 15) * 15;
         var rate = scrolled * .15;
         var rate4 = scrolled * .25;
         var rate2 = scrolled * -.15;
