@@ -270,7 +270,7 @@ p {
   flex-wrap: wrap;
   justify-content:space-between;
   float: right;
-  width: 50%;
+  width: 100%;
   margin-left: 2%;
   height: 50px;
 }
@@ -279,7 +279,7 @@ p {
   transition: .5s ease;
   height: 50px;
   flex: 45%;
-  width: 45%;
+  max-width: 47.5%;
   img {
   width: 100%;
   }
@@ -308,6 +308,13 @@ p {
   align-items: center;
   box-shadow: 1px 5px 5px adjust-color($pillowfort, $lightness: -60%, $alpha: -.8);
   border-radius: 15px;
+}
+
+.partnerbutton {
+  .nametag {
+    background-color: $horse;
+    color: $butternut;
+  }
 }
 
 
